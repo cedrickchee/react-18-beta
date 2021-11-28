@@ -1,4 +1,4 @@
-# Next.js 12 and React 18 Beta Demo
+# Next.js _12.0.4_ and React 18 _Beta_ Demo & Benchmark
 
 Next.js 12 comes with [React 18 Beta support](https://nextjs.org/blog/next-12#preparing-for-react-18).
 
@@ -7,6 +7,9 @@ like `startTransition`, and a new streaming API for server rendering with
 support for `React.lazy`.
 
 _This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)._
+
+_This project referenced the [Next.js 12.0.1 **React 18 Alpha**
+Demo](https://github.com/cedrickchee/next-rsc-demo/) (released on Oct 27)._
 
 [**React 18 usage in Next.js**](https://nextjs.org/docs/advanced-features/react-18)
 
