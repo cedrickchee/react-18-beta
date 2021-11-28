@@ -98,3 +98,63 @@ Page                                       Size     First Load JS
 ℇ  (Streaming)  server-side renders with streaming (uses React 18 SSR streaming or Server Components)
 λ  (Server)     server-side renders at runtime (uses getInitialProps or getServerSideProps)
 ```
+
+## Performance and UX Benchmark
+
+I have been casually tracking and researching the progress of [the plan for React 18](https://reactjs.org/blog/2021/06/08/the-plan-for-react-18.html). I have tested multiple React 18 versions since, from Alpha release to the current [Beta release](https://github.com/reactwg/react-18/discussions/112).
+
+![homepage](docs/media/homepage.png)
+_Homepage_
+
+![HN](docs/media/hn.png)
+_HN_
+
+**Benchmark specs:**
+
+- React version: 18.0.0-beta-0cc724c77-20211125
+- Next.js version: 12.0.4 (stable)
+- Build: optimized for production
+- Chrome-based browser
+- Network connection: local
+- Test device: desktop and mobile
+
+We will use Lighthouse for benchmarking:
+
+1. React Server Components (RSC) with HTTP streaming
+2. Static + Client Side Rendering (CSR) without HTTP streaming
+
+### React Server Components (RSC) with HTTP streaming
+
+**Device: mobile**
+
+![Lighthouse - RSC mobile](docs/media/rsc_mobile.png)
+_Lighthouse_
+
+![Original trace - RSC mobile](docs/media/rsc_mobile_perf_trace.png)
+_Original trace_
+
+**Device: desktop**
+
+![Lighthouse - RSC desktop](docs/media/rsc_desktop.png)
+_Lighthouse_
+
+![Original trace - RSC desktop](docs/media/rsc_desktop_perf_trace.png)
+_Original trace_
+
+### Static + Client Side Rendering (CSR) without HTTP streaming
+
+**Device: mobile**
+
+![Lighthouse - CSR mobile](docs/media/csr_mobile.png)
+_Lighthouse_
+
+![Original trace - CSR mobile](docs/media/csr_mobile_perf_trace.png)
+_Original trace_
+
+**Device: desktop**
+
+![Lighthouse - CSR desktop](docs/media/csr_desktop.png)
+_Lighthouse_
+
+![Original trace - CSR desktop](docs/media/csr_desktop_perf_trace.png)
+_Original trace_
